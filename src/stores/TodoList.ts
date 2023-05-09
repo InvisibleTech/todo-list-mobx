@@ -6,7 +6,7 @@ export class TodoList {
 
   constructor(todos: string[]) {
     makeObservable(this, {
-      list: observable,
+      list: observable.shallow,
       addTodo: action,
       removeTodo: action,
       finishedTodos: computed,

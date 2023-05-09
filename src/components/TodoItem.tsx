@@ -4,7 +4,7 @@ import TodoItemModel from '../stores/TodoItem';
 import { useStore } from '../stores/use-store';
 import { onEnterPress } from '../ui-helpers/on-enter';
 
-const TodoItem = (props: { todo: TodoItemModel }) => {
+export const TodoItem = (props: { todo: TodoItemModel }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [newText, setNewText] = useState('');
   const todoList = useStore();
@@ -36,5 +36,3 @@ const TodoItem = (props: { todo: TodoItemModel }) => {
     </div>
   );
 };
-
-export default TodoItem;
