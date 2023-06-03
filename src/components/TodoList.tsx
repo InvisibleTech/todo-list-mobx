@@ -1,6 +1,6 @@
 // TODO: read this https://github.com/mobxjs/mobx/discussions/3391
 
-import { Observer, useObserver } from 'mobx-react-lite';
+import { Observer } from 'mobx-react-lite';
 import { useStore } from '../stores/use-store';
 import { TodoItem } from './TodoItem';
 
