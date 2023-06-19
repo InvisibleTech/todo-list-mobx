@@ -39,7 +39,9 @@ export const TodoItem = (props: { todo: TodoItemModel }) => {
           <button disabled={todo.isDone} onClick={todo.letsNotDoThatAgain}>
             <ImSad color={todo.fun === 'no' ? 'green' : undefined} />
           </button>
-          <button onClick={() => setIsEditing(true)}>edit</button>
+          <button onClick={() => setIsEditing(true)} disabled={todo.isDone}>
+            edit
+          </button>
           <button onClick={() => todoList.removeTodo(todo)}>X</button>
         </div>
       )}

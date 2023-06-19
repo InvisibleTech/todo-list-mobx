@@ -1,13 +1,13 @@
 import { action, makeObservable, observable } from 'mobx';
 
-export type funFactor = undefined | 'yes' | 'no' | 'meh';
+export type funFactor = 'yes' | 'no' | 'meh';
 
 export default class TodoItem {
   id = Date.now();
 
   text: string = '';
   isDone: boolean = false;
-  fun: funFactor = undefined;
+  fun?: funFactor = undefined;
 
   constructor(text: string) {
     // For a shorter version see makeAutoObservable
